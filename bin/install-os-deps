@@ -2,5 +2,5 @@
 echo " ===> Installing os dependencies..."
 set -x
 apk update
-apk add bash build-base curl docker
+apk add bash build-base curl docker openrc
 rm -rf /var/cache/apk/*

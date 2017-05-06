@@ -1,12 +1,15 @@
 #!/bin/bash -e
 echo " ===> Installing go 1.8..."
 set -x
+# setup
 apk update
 apk add go
 
-curl -s https://storage.googleapis.com/golang/go1.8.1.src.tar.gz | tar -C /tmp -xz
-cd /tmp/go/src
+# download artifacts
+curl -s https://storage.googleapis.com/golang/go1.8.1.src.tar.gz | tar -C /usr/local -xz
 
+# main install phase
+pushd /usr/local/go/src
 # apply alpine-specific patches to go (no-pic currently only at time of writing)
 for p in /tmp/go-alpine-patches/*.patch; do \
   [ -f "$p" ] || continue; \
@@ -14,7 +17,9 @@ for p in /tmp/go-alpine-patches/*.patch; do \
 done; \
 
 # let er rip
-GOROOT_BOOTSTRAP=/usr/lib/go ./make.bash
+GOROOT_BOOTSTRAP=$(go env GOROOT) ./make.bash
+popd
 
+# cleanup
 apk del go
 rm -rf /var/cache/apk/*

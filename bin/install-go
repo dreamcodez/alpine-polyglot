@@ -14,7 +14,7 @@ for p in /tmp/go-alpine-patches/*.patch; do \
 done; \
 
 # let er rip
-GOROOT_BOOTSTRAP=/usr/lib/go ./all.bash
+GOROOT_BOOTSTRAP=/usr/lib/go ./make.bash
 
 apk del go
 rm -rf /var/cache/apk/*

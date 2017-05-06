@@ -1,0 +1,19 @@
+#!/bin/bash -e
+
+VERSION=3.6.1
+
+echo " ===> Installing Python $VERSION..."
+set -x
+
+# download artifacts
+curl -sS "https://www.python.org/ftp/python/$VERSION/Python-$VERSION.tar.xz" | tar -C /tmp -xJ
+
+# main install phase
+pushd "/tmp/Python-$VERSION"
+./configure
+make
+make install
+popd
+
+# cleanup
+rm -r "/tmp/Python-$VERSION"

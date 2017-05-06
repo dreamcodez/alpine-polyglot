@@ -1,15 +1,15 @@
 #!/bin/bash -e
-echo " ===> Installing node 7.10..."
+
+VERSION=7.10.0
+
+echo " ===> Installing NodeJS $VERSION..."
 set -x
-# setup
-#apk update
-#apk add go
 
 # download artifacts
-curl -sS https://nodejs.org/dist/v7.10.0/node-v7.10.0.tar.gz | tar -C /tmp -xz
+curl -sS "https://nodejs.org/dist/v$VERSION/node-v$VERSION.tar.xz" | tar -C /tmp -xJ
 
 # main install phase
-pushd /tmp/node-v7.10.0
+pushd "/tmp/node-v$VERSION"
 ./configure
 make
 make install
@@ -19,6 +19,4 @@ popd
 npm install -g yarn
 
 # cleanup
-#rm -r /tmp/node-v7.10.0
-#apk del go
-#rm -r /var/cache/apk/*
+rm -r "/tmp/node-v$VERSION"

@@ -1,6 +1,0 @@
-#!/bin/sh -e
-echo " ===> Installing os dependencies..."
-set -x
-apk update
-apk add bash build-base curl docker
-rm -rf /var/cache/apk/*

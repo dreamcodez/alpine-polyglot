@@ -1,0 +1,3 @@
+#!/bin/bash -e
+#bin/phase2/install-go
+bin/phase2/install-nodejs

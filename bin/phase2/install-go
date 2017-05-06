@@ -6,7 +6,7 @@ apk update
 apk add go
 
 # download artifacts
-curl -s https://storage.googleapis.com/golang/go1.8.1.src.tar.gz | tar -C /usr/local -xz
+curl -Ss https://storage.googleapis.com/golang/go1.8.1.src.tar.gz | tar -C /usr/local -xz
 
 # main install phase
 pushd /usr/local/go/src
@@ -25,4 +25,4 @@ echo "export PATH=/usr/local/go/bin:\$PATH" >> /etc/profile
 
 # cleanup
 apk del go
-rm -rf /var/cache/apk/*
+rm -r /var/cache/apk/*

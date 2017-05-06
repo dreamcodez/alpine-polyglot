@@ -1,11 +1,15 @@
 FROM alpine:3.5
 WORKDIR /tmp
 
-COPY bin/install-os-deps bin/install-os-deps
-RUN bin/install-os-deps
+# os deps
+COPY bin/phase1/ bin/phase1/
+RUN bin/phase1/install
 
+# polyglot file deps
 COPY go-alpine-patches/ go-alpine-patches/
-COPY bin/install-go bin/install-go
-RUN bin/install-go
 
-RUN rm -rf /tmp/*
+# polyglot install
+COPY bin/phase2/ bin/phase2/
+RUN bin/phase2/install
+
+RUN rm -r /tmp/*

@@ -7,3 +7,5 @@ RUN bin/install-os-deps
 COPY go-alpine-patches/ /tmp/go-alpine-patches/
 COPY bin/install-go bin/install-go
 RUN bin/install-go
+
+RUN rm -rf /tmp/*

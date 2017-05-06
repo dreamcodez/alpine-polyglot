@@ -20,6 +20,9 @@ done; \
 GOROOT_BOOTSTRAP=$(go env GOROOT) ./make.bash
 popd
 
+# add to path
+echo "PATH=/usr/local/go/bin:$PATH" >> /etc/profile
+
 # cleanup
 apk del go
 rm -rf /var/cache/apk/*

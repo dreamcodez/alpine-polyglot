@@ -7,5 +7,6 @@ apk add \
   build-base \
   curl \
   docker \
-  linux-headers
+  linux-headers \
+  zlib
 rm -r /var/cache/apk/*

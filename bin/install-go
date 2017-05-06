@@ -1,0 +1,20 @@
+#!/bin/bash -e
+echo " ===> Installing go 1.8..."
+set -x
+apk update
+apk add go
+
+curl -s https://storage.googleapis.com/golang/go1.8.1.src.tar.gz | tar -C /tmp -xz
+cd /tmp/go/src
+
+# apply alpine-specific patches to go (no-pic currently only at time of writing)
+for p in /tmp/go-alpine-patches/*.patch; do \
+  [ -f "$p" ] || continue; \
+  patch -p2 -i "$p"; \
+done; \
+
+# let er rip
+GOROOT_BOOTSTRAP=/usr/lib/go ./all.bash
+
+apk del go
+rm -rf /var/cache/apk/*

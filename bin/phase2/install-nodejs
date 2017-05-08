@@ -4,6 +4,9 @@ VERSION=7.10.0
 
 echo " ===> Installing NodeJS $VERSION..."
 set -x
+# setup
+apk update
+apk add python
 
 # download artifacts
 curl -sS "https://nodejs.org/dist/v$VERSION/node-v$VERSION.tar.xz" | tar -C /tmp -xJ
@@ -20,3 +23,5 @@ npm install -g yarn
 
 # cleanup
 rm -r "/tmp/node-v$VERSION"
+apk del python
+rm -r /var/cache/apk/*

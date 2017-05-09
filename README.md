@@ -2,6 +2,8 @@
 
 This docker container is prebuilt on quay.io and tracks every branch:
 
+[![Docker Repository on Quay](https://quay.io/repository/dreamcodez/alpine-polyglot/status "Docker Repository on Quay")](https://quay.io/repository/dreamcodez/alpine-polyglot)
+
 https://quay.io/repository/dreamcodez/alpine-polyglot
 
 DONE:

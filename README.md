@@ -1,5 +1,9 @@
 # alpine-polyglot
 
+This docker container is prebuilt on quay.io and tracks every branch:
+
+https://quay.io/repository/dreamcodez/alpine-polyglot
+
 DONE:
 
 1. Go 1.8

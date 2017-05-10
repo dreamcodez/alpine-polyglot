@@ -8,5 +8,6 @@ apk add \
   curl \
   docker \
   linux-headers \
+  openssl-dev \
   zlib-dev
 rm -r /var/cache/apk/*

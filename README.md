@@ -12,6 +12,11 @@ DONE:
 2. Python 3.6
 3. NodeJS 7.10
 
+OTHER:
+
+yarn
+awscli (via pip)
+
 TODO:
 
 1. Support haskell

@@ -2,3 +2,4 @@
 bin/phase2/install-go
 bin/phase2/install-python
 bin/phase2/install-nodejs
+bin/phase2/install-awscli

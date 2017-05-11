@@ -1,0 +1,4 @@
+#!/bin/bash -e
+echo " ===> Installing awscli..."
+set -x
+python3 -m pip install awscli

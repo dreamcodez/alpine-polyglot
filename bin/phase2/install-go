@@ -23,6 +23,9 @@ popd
 # add to path
 echo "export PATH=/usr/local/go/bin:\$PATH" >> /etc/profile
 
+# install gpm
+curl -O https://raw.githubusercontent.com/pote/gpm/v1.4.0/bin/gpm && chmod +x gpm && mv gpm /usr/local/bin
+
 # cleanup
 apk del go
 rm -r /var/cache/apk/*

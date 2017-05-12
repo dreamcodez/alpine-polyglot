@@ -16,6 +16,7 @@ OTHER:
 
 yarn
 awscli (via pip)
+gpm ( https://github.com/pote/gpm )
 
 TODO:
 

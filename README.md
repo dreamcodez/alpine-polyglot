@@ -6,18 +6,19 @@ This docker container is prebuilt on quay.io and tracks every branch:
 
 https://quay.io/repository/dreamcodez/alpine-polyglot
 
-DONE:
+###DONE
 
 1. Go 1.8
 2. Python 3.6
 3. NodeJS 7.10
 
-OTHER:
+###OTHER
 
-yarn
-awscli (via pip)
+* yarn
+* awscli (via pip)
+* gpm ( https://github.com/pote/gpm )
 
-TODO:
+###TODO
 
 1. Support haskell
 2. Support ruby?? (if so a nice slim version)

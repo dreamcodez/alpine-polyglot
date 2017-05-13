@@ -7,10 +7,10 @@ This docker container is prebuilt on quay.io and tracks every branch:
 https://quay.io/repository/dreamcodez/alpine-polyglot
 
 ###DONE
-
-1. Go 1.8.1
-2. Python 3.6.1
-3. NodeJS 7.10.0
+1. Alpine Linux 3.5
+2. Go 1.8.1 (w/ gpm 1.4.0)
+3. Python 3.6.1
+4. NodeJS 7.10.0
 
 ###OTHER
 

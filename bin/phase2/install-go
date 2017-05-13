@@ -1,7 +1,6 @@
 #!/bin/bash -eu
 
 VERSION=1.8.1
-GPM_VERSION=1.4.0
 
 echo " ===> Installing Go $VERSION..."
 set -x
@@ -27,11 +26,6 @@ popd
 # add relevant things to system env for custom go
 echo "export PATH=/usr/local/go/bin:\$PATH" >> /etc/profile
 mkdir -p /usr/local/lib/go
-echo "export GOPATH=/usr/local/lib/go" >> /etc/profile
-
-# install gpm
-echo " ===> Installing GPM $GPM_VERSION..."
-curl -O "https://raw.githubusercontent.com/pote/gpm/v$GPM_VERSION/bin/gpm" && chmod +x gpm && mv gpm /usr/local/bin
 
 # cleanup
 apk del go

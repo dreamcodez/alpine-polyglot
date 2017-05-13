@@ -8,7 +8,7 @@ https://quay.io/repository/dreamcodez/alpine-polyglot
 
 ###DONE
 1. Alpine Linux 3.5
-2. Go 1.8.1 (w/ gpm 1.4.0)
+2. Go 1.8.1
 3. Python 3.6.1
 4. NodeJS 7.10.0
 
@@ -16,7 +16,6 @@ https://quay.io/repository/dreamcodez/alpine-polyglot
 
 * yarn
 * awscli (via pip)
-* gpm ( https://github.com/pote/gpm )
 
 ###TODO
 

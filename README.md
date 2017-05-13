@@ -8,9 +8,9 @@ https://quay.io/repository/dreamcodez/alpine-polyglot
 
 ###DONE
 
-1. Go 1.8
-2. Python 3.6
-3. NodeJS 7.10
+1. Go 1.8.1
+2. Python 3.6.1
+3. NodeJS 7.10.0
 
 ###OTHER
 

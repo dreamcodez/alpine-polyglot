@@ -1,2 +1,2 @@
-#!/bin/sh -e
+#!/bin/sh -eu
 bin/phase1/install-os-deps
